@@ -1,13 +1,135 @@
-body {
+/* General reset and body styling */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+/* Main App Container */
+.App {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+/* Search Input */
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  width: 75%;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading Indicator */
+p {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Results Container */
+.results-container {
+  margin-top: 20px;
+  /* padding: 15px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 60vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Product Card */
+.product-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 8px 0;
+}
+
+/* Adding specific styling to distinguish each field */
+.product-card .category {
+  color: #007bff; /* Blue to make the category stand out */
+}
+
+.product-card .description {
+  color: #2d353c; /* Medium gray for a subtle look */
+  font-style: italic; /* Makes the description look distinct */
+}
+
+.product-card .price {
+  color: #28a745; /* Green to indicate price, suggesting value */
+  font-size: 1.2rem; /* Slightly larger font to emphasize price */
+}
+
+
+.product-card .rating {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.product-card .product-image {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
 }
